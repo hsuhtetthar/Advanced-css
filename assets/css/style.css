@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --A-font: "Teko" ,sans-serif;
+    --H-font: "Source Serif Pro" , serif;
+    --fw-l: 300
+    --fw-m: 500
+    --fw-b: 700
+    --fs-base: 1rem;
+
+    /* color */
+    --one-color:rgba(160, 104, 113, 0.884);
+    --two-color:rgb(21, 21, 22);
+    --three-color:rgba(190, 192, 184, 0.507);
+    --background-color: rgba(207, 158, 22, 0.418);
+    --color-bright: rgb(119, 133, 197);
+    --color-dark:rgb(76, 42, 104);
+    --it-color: rgb(180, 168, 168);
+    --mid-color:rgba(204, 115, 204, 0.562);
+
+    /* Nested Variable */
+    --header-bgColor: var(var(--lt-color));
+    --header-textColor: var(var(--tertiary-color));
+
+    /* helper */
+    --spacer: 2rem;
+    --spacer-dbl: calc(var(--spacer) * 2);
+    --border-radius: 6px;
+    --shadow: 0 0 6px rgba(0,0,0..3);
+}
+
+body {
+     background-color: var(--one-color);
+     color: var(--two-color);
+     font-family: var(--A-font);
+     font-weight: var(--shadow);
+     display: grid;
+     flex-direction: column;
+     height: 50vh;
+}
+h1{
+    color: var(--two-color);
+    font-family: var(--A-font);
+}
+h2{
+    color: var(--two-color);
+    font-family: var(--H-font);
+    margin-top: var(--spacer);
+}
+
+p {
+    margin-left: 100px;
+    font-size: 25px;
+}
+img {
+    max-width: 200%;
+    height: 300px;
+    margin: 20px;
+}
+
+header {
+    background-color: var(--three-color);
+    color: var(--header-bgColor);
+    padding: var(--spacer-dbl);
+}
+
+footer button {
+    border-radius: var(--header-bgColor);
+    box-shadow: var(--shadow);
+    background-color: var(--three-color);
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color .3s ease;
+    text-decoration: none;
+
+}
+
+.footer button:hover {
+    background-color: var(--color-bright);
+}
+
+section.Shop {
+    display: flex;
+    gap: var(--spacer);
+    width: 60%;
+    margin: var(--spacer-dbl) auto
+} 
+.shop article {
+    border: solid 1px var(--two-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.Shop article.callout {
+    --one-color: var(--sec-color);
+}
+
+.Shop h2 {
+    text-align: center;
+    background-color: var(--one-color);
+    color: var(--lt-color);
+    margin-top: 0;
+    padding: 0.25rem;
+}
+
+.Shop figcaption {
+    text-align:left;
+    font-size: 2Srem;
+    font-style: oblique;
+    padding: .25rem;
+}
+
+.Shop p {
+    margin: 15px 10px;
+    border: 2px solid var(--two-color);
+}
+
+.footer button a {
+    display:inline;
+    float: right;
+    margin: 0 0 var(--spacer) var(--spacer);
+}
+
+footer {
+    background-color: var(--sec-color);
+    color: var(--lt-color);
+    text-align: right;
+    font-size: 1.2rem; 
+   
+}
